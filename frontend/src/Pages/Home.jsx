@@ -9,6 +9,7 @@ const Home = () => {
   const [menu, setMenu] = useState([]);
   const [items, setItems] = useState();
   const [title,setTitle] = useState();
+  const [description,setDescription] = useState();
 
   const fetchData = async () => {
     try {
@@ -30,7 +31,8 @@ const Home = () => {
       if (response.data.success) {
         console.log(response.data.menu.name);
         setItems(response.data.menu.items);
-        setTitle(response.data.menu.name)
+        setTitle(response.data.menu.name);
+        setDescription(response.data.menu.description);
       }
     } catch (error) {
       console.log(error);
@@ -58,6 +60,7 @@ const Home = () => {
           >
             {item.name}
           </HomeButton>
+          
         ))}
         
       </div>
@@ -69,6 +72,7 @@ const Home = () => {
           <h1 className="text-4xl font-bold tracking-wider text-red-500">
             {title}
           </h1>
+          <p>{description}</p>
         </div>
 
         {/* <!-- Menu Items --> */}

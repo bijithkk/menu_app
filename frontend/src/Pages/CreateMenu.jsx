@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import CreateMenuButton from "../components/CreateMenuButton";
 import MenuInputs from "../components/MenuInputs";
 
-const CreateMenu = () => {
+const CreateMenu = () => { 
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
   const [data, setData] = useState([]);
   const [activeMenuId, setActiveMenuId] = useState(null);

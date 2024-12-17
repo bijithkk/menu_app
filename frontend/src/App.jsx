@@ -2,7 +2,7 @@ import { Routes,Route} from 'react-router-dom';
 
 import NavBar from "./components/Navbar"
 import Home from './Pages/Home';
-import CreateMenu from './Pages/createMenu';
+import CreateMenu from './Pages/CreateMenu';
 import { ToastContainer } from "react-toastify";
 
 
